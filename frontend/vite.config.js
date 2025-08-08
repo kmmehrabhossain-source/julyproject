@@ -6,6 +6,13 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
+            publicDirectory: '../backend/public',
+            buildDirectory: 'build',
+            hotFile: '../backend/public/hot',
         }),
     ],
+    build: {
+        outDir: '../backend/public/build',
+        emptyOutDir: false,
+    },
 });
